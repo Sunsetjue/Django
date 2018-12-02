@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用HTML块级标签(块元素)</title>
+</head>
+<body>
+<!--常用的有语义的块级元素 有默认样式 独占一行-->
+    <!--标题标签 h1-h6-->
+        <!--这是一个标题-->
+        <!--这是另一个标题-->
+        <h1>这是一级宋越</h1>
+        <h2>这是二级宋越</h2>
+        <h3>这是三级宋越</h3>
+        <h4>这是四级宋越</h4>
+        <h5>这是五级宋越</h5>
+        <h6>这是六级宋越</h6>
+    <!--段落标签 独占一行 有默认样式-->
+        <!--br 标签强制换行标签-->
+        <p>超文本标记语言<br>（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。 </p>
+        <p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。 </p>
+
+    <!--列表-->
+        <!--无序列表 ul li  有默认样式 独占一行-->
+        <!--注意 ul标签当中  只能写li标签-->
+        <ul>
+            <!--<h1></h1> -->
+            <li>列表项一</li>
+            <li>列表项二</li>
+            <li>列表项三</li>
+        </ul>
+    <!--有序列表 ol li 有自己得默认样式 独占一行-->
+        <!--有序列表当中有type属性 设置有列表的标记类型
+        start 设置列表项从第几个标记开始
+        -->
+        <ol type="1" start="1">
+            <li>这是有序列表</li>
+            <li>这是有序列表</li>
+        </ol>
+    <!--自定义列表 dl dt dd-->
+        <dl>
+            <dt>这是自定义列表</dt>
+            <dd>这是自定义列表</dd>
+            <dd>这是自定义列表</dd>
+            <dt>这是自定义列表的标题</dt>
+            <dd>这是列表标题的解释</dd>
+        </dl>
+    <!--表格标签 table声明一个表格 th表头 tr行 td列-->
+        <!--声明一个表格-->
+        <!--
+            table 的属性 : width   设置单元格的总体宽度
+                            height  设置单元格的总体高度
+                            border 设置边框是否显示
+                            cellpadding 设置表格当中内容距离边框间距
+                            cellspacing 设置表格和表格之间的间距
+             单元格合并 :colspan  设置水平方向一个单元格占据的宽度
+                         rowspan  设置垂直方一个单元格占据的高度
+             单元格内容的对齐方式: align 水平对齐方式 默认是靠左显示   center  right
+                                    valign 竖直对齐方式 默认垂直居中   top    bottom
+                                    注意:如果给tr设置  会影响整行 给td设置只影响当前的单元格
+              th 标签代表表头  默认水平居中  并且有加粗效果
+
+        -->
+        <table border="1" cellpadding="10px" cellspacing="0" width="600px" height="400px">
+            <!--表格当中行  第一行-->
+            <tr >
+                <!--这是表格当中的列-->
+                <!--<td colspan="4">这是第一行的第一列</td>-->
+                <th colspan="4">这是表头</th>
+                <!--<td>这是第一行的第二列</td>-->
+                <!--<td>这是di一行的第三列</td>-->
+                <!--<td>这是第一行的第四列</td>-->
+            </tr>
+            <!--这是第二行-->
+            <tr valign="middle" align="center">
+                <td rowspan="2">这是第二行的第一列</td>
+                <td>这是第二行的第二列</td>
+                <td>这是第二行的第三列</td>
+                <td>这是第三行的第四列</td>
+            </tr>
+            <!--第三行-->
+             <tr>
+                <!--<td>这是第三行的第一列</td>-->
+                <td colspan="2" align="center">这是第三行的第二列</td>
+                <!--<td>这是第三行的第三列</td>-->
+                <td>这是第三行的第四列</td>
+            </tr>
+        </table>
+<!--水平分割线-->
+    <hr>
+
+    <!--区块元素 没有默认样式(没有默认的语义) div  独占一行 一般用来划定一块区域 配合css在布局当中使用 -->
+    <div>这是一个div</div><br>
+
+    <!--链接标签 a标签 href表示需要跳转的网址-->
+    <!--路径问题 在实际开发中建议用相对路径 ./当前目录 ../上一级目录-->
+    <a href="http://www.baidu.com">百度</a><br>
+    <a href="./1.html" target="_blank">第一个网页</a><br>
+    <!--target="_blank表示新打开一个页面进行跳转-->
+
+    <!--图像标签 img标签(单标签）不需要闭合-->
+    <!--src里面填写网络地址或者本地地址
+    alt里面用于填写图片加载失败的替代文字(必须存在)
+    title是指鼠标停留在图片时候的提示(可有可不有)-->
+    <!--一般只给图片设置宽度或者高度，另一边会等比例拉伸-->
+    <img src="./2015-09-18 232805.jpg" alt="这是图片标签" title="这是我电脑账户头像" width="400px">
+    <br>
+    <br>
+
+    <!--有语义的文本标签-->
+        <!--加粗b-->
+        <b>哈哈哈哈哈</b> alt里面用于填写图片加载失败的替代文字(必须存在)<br>
+        <!--倾斜I-->
+        <I>火火火火火</I> title是指鼠标停留在图片时候的提示(可有可不有)<br>
+                          一般只给图片设置宽度或者高度，另一边会等比例拉伸<br>
+    <!-- span 无语义的行级元素 一般span标签也是配合css使用 来设置文本当中一部分内容-->
+        <span style="color:blue">一般只给图片设置宽度或者高度，另一边会等比例拉伸</span><br>
+
+    <form action="" method="">
+        <!--表单控件
+            type: 指定我们要填写的的表单类型 文本 密码框 单选框 多选框
+            必须要填写name属性
+        -->
+        用户名： <input type="text" name="username" value="" placeholder="输入用户名或者邮箱"> <br>
+        密&nbsp;&nbsp;&nbsp;码： <input type="password" name="password"> <br>
+        <!--radio属性表示单选 里面name的名字一定要一样，不然就不是单选了，也要指定值-->
+        性&nbsp;&nbsp;&nbsp;别： <input type="radio" name="sex" value="1">男
+                                    <input type='radio' name="sex" value="0">女 <br>
+        <!--checkbox属性表示多选 里面的name值也必须相同 也要指定value-->
+        特&nbsp;&nbsp;&nbsp;点： <input type="checkbox" name="love[]" value="b">被孙彬喜欢
+                                    <input type="checkbox" name="love[]" value="t">特别可爱
+                                    <input type="checkbox" name="love[]" value="x">胸口碎大石 <br>
+        <!--select属性表示下拉框 配合option使用-->
+        爱&nbsp;&nbsp;&nbsp;好： <select name="hobby" id="2">
+                                        <option value="3">睡懒觉</option>
+                                        <option value="4">玩游戏</option>
+                                        <option value="5">想要羊驼包</option>
+    </select>
+    </form>
+<br>
+<br>
+<br>
+</body>
+</html>

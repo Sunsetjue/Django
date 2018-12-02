@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if标签的使用</title>
+    <style>
+        p{
+            color:red;
+            font-size:40px;
+        }
+    </style>
+</head>
+<body>
+        {% if age == 21 %}
+            <p>{{age}}岁 兄弟你太大了</p>
+        {% elif age == 18 %}
+            <p>{{age}}岁 不多不少，正好喜欢</p>
+        {% else %}
+            <p>{{age}}岁 这不是我喜欢的年龄</p>
+        {% endif %}
+
+</body>
+</html>
